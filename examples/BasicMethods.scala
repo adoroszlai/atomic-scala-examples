@@ -1,8 +1,7 @@
 // BasicMethods.scala
-import com.atomicscala.AtomicTest._
+package com.atomicscala.exercise
 
-def cube(x:Int):Int = { x * x * x }
-cube(3) is 27
-
-def bang(s:String):String = { s + "!" }
-bang("pop") is "pop!"
+class BasicMethods {
+	def cube(x:Int):Int = { x * x * x }
+	def bang(s:String):String = { s + "!" }
+}
