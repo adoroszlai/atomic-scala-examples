@@ -8,3 +8,6 @@ val weightStatus = {
   else "Overweight"
 }
 println(weightStatus)
+val idealBmi = 22
+val idealWeight = idealBmi * height * height / 703.07
+println(idealWeight)
