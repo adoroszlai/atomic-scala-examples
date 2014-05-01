@@ -1,20 +1,20 @@
 import com.atomicscala.AtomicTest._
 
 class SimpleTime(h:Int, m:Int) {
-	def hours:Int = h
-	def minutes:Int = m
-	def value:Int = h * 60 + m
+  def hours:Int = h
+  def minutes:Int = m
+  def value:Int = h * 60 + m
 
-	override def toString = {
-		val m = Math.abs(minutes)
-		val s = if (hours >= 0 && minutes < 0) "-" else ""
-		f"$s$hours:$m%02d"
-	}
+  override def toString = {
+    val m = Math.abs(minutes)
+    val s = if (hours >= 0 && minutes < 0) "-" else ""
+    f"$s$hours:$m%02d"
+  }
 
-	def -(other:SimpleTime) = {
-		val diff = value - other.value
-		new SimpleTime(diff / 60, diff % 60)
-	}
+  def -(other:SimpleTime) = {
+    val diff = value - other.value
+    new SimpleTime(diff / 60, diff % 60)
+  }
 }
 
 val t1 = new SimpleTime(9, 30)

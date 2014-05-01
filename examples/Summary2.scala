@@ -23,8 +23,8 @@ println(si, sc, ss)
 val vv = Vector(vi, vc, vs)
 var s = ""
 for (v <- vv) {
-	for (a <- v) {
-		s += a + " "
-	}
+  for (a <- v) {
+    s += a + " "
+  }
 }
 println(s)
