@@ -1,10 +1,7 @@
 import com.atomicscala.AtomicTest._
 
-class Dimension(var height:Int, var width:Int)
+case class Dimension(height:Int = 10, var width:Int = 10)
 
-val c = new Dimension(5, 7)
-c.height is 5
-c.height = 10
+val c = new Dimension(width=12)
 c.height is 10
-c.width = 19
-c.width is 19
+c.width is 12
